@@ -229,6 +229,7 @@
 		</field>
 	</record>
 
+
 	<record id="view_company_form_with_code" model="ir.ui.view">
 		<field name="name">id.category.list2</field>
 		<field name="model">res.company</field>

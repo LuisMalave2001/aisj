@@ -657,6 +657,7 @@ class GroupSubAccount(GroupBase):
 
 class GroupItem(GroupBase):
     _name = "analytic_accounts.group.item"
+    
     sub_account_id = fields.Many2one("analytic_accounts.group.sub_account", ondelete="cascade") 
     
     @api.model
