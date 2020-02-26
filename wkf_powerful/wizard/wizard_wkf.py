@@ -8,7 +8,6 @@ class wizard_wkf_message(models.TransientModel):
     _name = 'wizard.wkf.message'
     name = fields.Char(u'Note')
 
-    @api.multi
     def apply(self):
         self.ensure_one()
         ctx = self.env.context
