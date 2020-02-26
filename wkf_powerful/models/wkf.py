@@ -12,7 +12,6 @@ class wkf_base(models.Model):
     _def_wkf_state_name = 'x_wkf_state'
     _def_wkf_note_name = 'x_wkf_note'
 
-    @api.one
     @api.depends('node_ids')
     def _compute_default_state(self):
         def _get_start_state(nodes):
@@ -235,7 +234,6 @@ class wkf_trans(models.Model):
     _name = "wkf.trans"
     _order = "sequence"
 
-    @api.one
     @api.depends('group_ids')
     def _compute_xml_groups(self):
         data_obj = self.env['ir.model.data']
@@ -260,7 +258,7 @@ class wkf_trans(models.Model):
     sequence = fields.Integer('Sequence')
     need_note = fields.Boolean('Force note', help="If true, the Workflow note can not be empty, usually when transfer is Reverse,you need it")
 
-    @api.one
+
     def make_log(self, res_name, res_id, note=''):
         return  self.env['log.wkf.trans'].create({'name':res_name, 'res_id': res_id, 'trans_id':self.id, 'note': note})
 
