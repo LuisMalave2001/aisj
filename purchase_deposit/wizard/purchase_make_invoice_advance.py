@@ -56,7 +56,6 @@ class PurchaseAdvancePaymentInv(models.TransientModel):
         self.deposit_account_id = product.property_account_expense_id
         self.deposit_taxes_id = product.supplier_taxes_id
 
-    @api.multi
     def _create_invoice(self, order, po_line, amount):
         Invoice = self.env['account.invoice']
         ir_property_obj = self.env['ir.property']
@@ -127,7 +126,6 @@ class PurchaseAdvancePaymentInv(models.TransientModel):
             subtype_id=self.env.ref('mail.mt_note').id)
         return invoice
 
-    @api.multi
     def create_invoices(self):
         Purchase = self.env['purchase.order']
         IrDefault = self.env['ir.default'].sudo()

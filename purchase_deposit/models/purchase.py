@@ -8,7 +8,6 @@ from odoo import api, fields, models
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
-    @api.multi
     def copy_data(self, default=None):
         if default is None:
             default = {}
