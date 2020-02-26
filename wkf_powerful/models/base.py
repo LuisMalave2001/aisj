@@ -48,7 +48,6 @@ def wkf_button_action(self):
     if trans.need_note:
         return {
             'name': _(u'工作流审批'),
-            'view_type': 'form',
             "view_mode": 'form',
             'res_model': 'wizard.wkf.message',
             'type': 'ir.actions.act_window',
@@ -121,7 +120,6 @@ def wkf_button_show_log(self):
     return {
         'name': _('WorkFollow Logs'),
         'view_mode': 'tree,form',
-        'view_type': 'form',
         'res_model': 'log.wkf.trans',
         'type': 'ir.actions.act_window',
         'target': 'new',
