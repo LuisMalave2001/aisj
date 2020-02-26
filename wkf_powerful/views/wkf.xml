@@ -106,7 +106,6 @@
             <field name="name">Custom WorkFollow</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">wkf.base</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form,diagram</field>
         </record>
         <menuitem id="wkf_base_menu" name="Custom WorkFollow" parent="menu_wkf_root"
@@ -158,7 +157,6 @@
             <field name="name">Custom WorkFollow Node</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">wkf.node</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="wkf_node_menu" name="WorkFollow Node" parent="menu_wkf_root"
@@ -202,7 +200,6 @@
             <field name="name">WorkFollow Transfer</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">wkf.trans</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="wkf_trans_menu" name="WorkFollow Transfer" parent="menu_wkf_root"
@@ -228,7 +225,6 @@
             <field name="name">Transfer log</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">log.wkf.trans</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="log_wkf_trans_menu" name="Transfer Log" parent="menu_wkf_root"
