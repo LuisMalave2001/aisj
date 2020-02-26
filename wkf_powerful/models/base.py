@@ -32,7 +32,6 @@ def wkf_trans_condition_expr_eval(self, lines):
 default_get_old = BM.default_get
 
 
-@api.model
 def default_get_new(self, fields_list):
     res = default_get_old(self, fields_list)
     if 'x_wkf_state' in fields_list:
@@ -40,7 +39,6 @@ def default_get_new(self, fields_list):
     return res
 
 
-@api.multi
 def wkf_button_action(self):
     ctx = self.env.context.copy()
     _logger.info('wkf_button_action %s' % self.env.context)
@@ -62,7 +60,6 @@ def wkf_button_action(self):
         return self.wkf_action()
 
 
-@api.multi
 def wkf_action(self, message=''):
     t_id = int(self.env.context.get('trans_id'))
     trans = self.env['wkf.trans'].browse(t_id)
