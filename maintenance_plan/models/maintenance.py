@@ -102,7 +102,6 @@ class MaintenancePlan(models.Model):
 
             plan.next_maintenance_date = next_date
 
-    @api.multi
     def unlink(self):
         """ Restrict deletion of maintenance plan should there be maintenance
             requests of this kind which are not done for its equipment """
