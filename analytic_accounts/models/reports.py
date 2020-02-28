@@ -14,4 +14,3 @@ class AnalyticAccount(models.AbstractModel):
             'docs': self,
         }
         return docargs
-    
